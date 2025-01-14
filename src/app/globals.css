@@ -1,21 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS base styles */
+@import 'tailwindcss/base';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Import Tailwind CSS components */
+@import 'tailwindcss/components';
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Import Tailwind CSS utilities */
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .menu-item {
+    @apply relative flex h-full cursor-pointer items-center p-4 text-pink-200 transition-colors ease-in-out hover:bg-white/15 hover:text-zinc-200;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
