@@ -1,6 +1,6 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
+import './globals.css';
 
 const jostFont = Jost({ subsets: ['latin'], weight: ['400', '500'] });
 
@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jostFont.className}  antialiased`}>{children}</body>
+      <body
+        className={`${jostFont.className} dark bg-zinc-200 text-zinc-900 antialiased dark:bg-zinc-900 dark:text-zinc-200`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
