@@ -1,9 +1,9 @@
 const Timeline = () => {
   return (
     <section>
-      <h2 className="mt-20">Timelup</h2>
+      <h2 className="mt-20">Time line</h2>
       <p>
-        Follow the timetable and stage to ensure you don't miss your favourite
+        Follow the timetable and stage to ensure you don&apos;t miss your favourite
         artists
       </p>
       <div className="relative mt-5 rounded-lg bg-zinc-800 px-3 py-4 text-zinc-200">

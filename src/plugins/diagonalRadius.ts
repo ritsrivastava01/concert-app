@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import plugin from 'tailwindcss/plugin';
 
 const diagonalRadius = plugin(({ addUtilities, theme, e, matchUtilities }) => {

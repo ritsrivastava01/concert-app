@@ -2,7 +2,6 @@ import lightOrdarkColor from '@check-light-or-dark/color';
 import plugin from 'tailwindcss/plugin';
 
 const buttonPlugin = plugin(({ addComponents, matchComponents, theme }) => {
-  // console.log(theme('spacing'));
   addComponents({
     '.btn': {
       display: 'inline-block',
@@ -12,13 +11,10 @@ const buttonPlugin = plugin(({ addComponents, matchComponents, theme }) => {
       borderRadius: `${theme('borderRadius.lg')}`,
     },
   });
-
-  for (const key in theme('colors')) {
-    if (
-      typeof theme('colors')[key] === 'object' &&
-      theme('colors')[key] !== undefined
-    ) {
-      for (const shade in theme('colors')[key]) {
+  const colors = theme('colors') || {};
+  for (const key in colors) {
+    if (colors[key] !== undefined && typeof colors[key] === 'object') {
+      for (const shade in colors[key]) {
         const colorType = lightOrdarkColor(theme(`colors.${key}.${shade}`));
         addComponents({
           [`.btn-${key}-${shade}`]: {
