@@ -47,14 +47,13 @@ const Headlines = () => {
     },
   ];
   return (
-    <section>
+    <>
       <h2>
         <span className="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent">
-          {' '}
           Headliners
         </span>
       </h2>
-      <p>
+      <p className="pt-4">
         Experience the sonic delight from these made-up artists across 7 days that
         music fans are calling “one of the many gigs that will happen this year”
       </p>
@@ -102,7 +101,7 @@ const Headlines = () => {
           <CaretRight size={72} />
         </button>
       </div>
-    </section>
+    </>
   );
 };
 

@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${jostFont.className} dark bg-zinc-200 text-zinc-900 antialiased dark:bg-zinc-900 dark:text-zinc-200`}
       >

@@ -1,4 +1,3 @@
-import BuyTicket from 'music/components/BuyTicket';
 import Header from 'music/components/Header';
 import Headlines from 'music/components/Headlines';
 import Hero from 'music/components/Hero';
@@ -13,12 +12,23 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <Hero />
-      <section className="mx-auto mt-20 max-w-screen-lg px-2">
-        <Headlines />
-        <Timeline />
-        <Tickets />
-        <BuyTicket />
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section className="mx-auto mt-20 max-w-screen-lg px-4">
+        <section id="headlines">
+          <Headlines />
+        </section>
+        <section id="lineup">
+          <Timeline />
+        </section>
+        <section id="tickets">
+          <Tickets />
+        </section>
+        {/* <section>
+          <BuyTicket />
+        </section> */}
       </section>
     </main>
   );
